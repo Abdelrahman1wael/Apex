@@ -1,0 +1,249 @@
+{
+  "fileInfos" : [ {
+    "path" : "STT_TTS\\agent.js",
+    "modificationInfo" : {
+      "contentHash" : 274299107,
+      "lastModified" : 1784697292875
+    },
+    "linesOfCode" : 133
+  }, {
+    "path" : "STT_TTS\\app.js",
+    "modificationInfo" : {
+      "contentHash" : -67270072,
+      "lastModified" : 1784697476501
+    },
+    "linesOfCode" : 175
+  }, {
+    "path" : "TIC TAC TOC\\script.js",
+    "modificationInfo" : {
+      "contentHash" : -767700552,
+      "lastModified" : 1784678648563
+    },
+    "linesOfCode" : 451
+  }, {
+    "path" : "company\\js\\main.js",
+    "modificationInfo" : {
+      "contentHash" : -593468919,
+      "lastModified" : 1784255269677
+    },
+    "linesOfCode" : 189
+  }, {
+    "path" : "company\\js\\translations.js",
+    "modificationInfo" : {
+      "contentHash" : -1361805105,
+      "lastModified" : 1784255251420
+    },
+    "linesOfCode" : 94
+  }, {
+    "path" : "dashboard\\data.js",
+    "modificationInfo" : {
+      "contentHash" : 1344032307,
+      "lastModified" : 1784253142331
+    },
+    "linesOfCode" : 28
+  }, {
+    "path" : "dashboard\\script.js",
+    "modificationInfo" : {
+      "contentHash" : -1059665503,
+      "lastModified" : 1784253279508
+    },
+    "linesOfCode" : 473
+  }, {
+    "path" : "find the chameleon\\script.js",
+    "modificationInfo" : {
+      "contentHash" : 1498950421,
+      "lastModified" : 1784595870088
+    },
+    "linesOfCode" : 150
+  }, {
+    "path" : "js\\analytics-engine.js",
+    "modificationInfo" : {
+      "contentHash" : 1625328210,
+      "lastModified" : 1784744368412
+    },
+    "linesOfCode" : 218
+  }, {
+    "path" : "js\\app.js",
+    "modificationInfo" : {
+      "contentHash" : -1426896948,
+      "lastModified" : 1784744385739
+    },
+    "linesOfCode" : 183
+  }, {
+    "path" : "js\\audio-synth.js",
+    "modificationInfo" : {
+      "contentHash" : -795328926,
+      "lastModified" : 1784744354772
+    },
+    "linesOfCode" : 98
+  }, {
+    "path" : "js\\launcher-modal.js",
+    "modificationInfo" : {
+      "contentHash" : 2080573525,
+      "lastModified" : 1784744379959
+    },
+    "linesOfCode" : 202
+  }, {
+    "path" : "js\\projects-data.js",
+    "modificationInfo" : {
+      "contentHash" : 981806984,
+      "lastModified" : 1784745826564
+    },
+    "linesOfCode" : 235
+  }, {
+    "path" : "js\\three-galaxy.js",
+    "modificationInfo" : {
+      "contentHash" : 1045457076,
+      "lastModified" : 1784744362165
+    },
+    "linesOfCode" : 437
+  }, {
+    "path" : "js\\voice-narrator.js",
+    "modificationInfo" : {
+      "contentHash" : 1632530757,
+      "lastModified" : 1784744374237
+    },
+    "linesOfCode" : 127
+  }, {
+    "path" : "marketing\\js\\analytics-engine.js",
+    "modificationInfo" : {
+      "contentHash" : 1625328210,
+      "lastModified" : 1784740792931
+    },
+    "linesOfCode" : 218
+  }, {
+    "path" : "marketing\\js\\app.js",
+    "modificationInfo" : {
+      "contentHash" : -1426896948,
+      "lastModified" : 1784740647991
+    },
+    "linesOfCode" : 183
+  }, {
+    "path" : "marketing\\js\\audio-synth.js",
+    "modificationInfo" : {
+      "contentHash" : -1826619551,
+      "lastModified" : 1784738264245
+    },
+    "linesOfCode" : 135
+  }, {
+    "path" : "marketing\\js\\d3-analytics.js",
+    "modificationInfo" : {
+      "contentHash" : -1408526765,
+      "lastModified" : 1784738281964
+    },
+    "linesOfCode" : 330
+  }, {
+    "path" : "marketing\\js\\fusion-reactor.js",
+    "modificationInfo" : {
+      "contentHash" : -1553922834,
+      "lastModified" : 1784738308346
+    },
+    "linesOfCode" : 124
+  }, {
+    "path" : "marketing\\js\\launcher-modal.js",
+    "modificationInfo" : {
+      "contentHash" : -1416585216,
+      "lastModified" : 1784740365506
+    },
+    "linesOfCode" : 206
+  }, {
+    "path" : "marketing\\js\\project-analytics.js",
+    "modificationInfo" : {
+      "contentHash" : 1850167780,
+      "lastModified" : 1784739134268
+    },
+    "linesOfCode" : 226
+  }, {
+    "path" : "marketing\\js\\projects-data.js",
+    "modificationInfo" : {
+      "contentHash" : 1581664392,
+      "lastModified" : 1784745835669
+    },
+    "linesOfCode" : 235
+  }, {
+    "path" : "marketing\\js\\strategy-engine.js",
+    "modificationInfo" : {
+      "contentHash" : -799077181,
+      "lastModified" : 1784738180743
+    },
+    "linesOfCode" : 187
+  }, {
+    "path" : "marketing\\js\\three-galaxy.js",
+    "modificationInfo" : {
+      "contentHash" : 1045457076,
+      "lastModified" : 1784738274459
+    },
+    "linesOfCode" : 437
+  }, {
+    "path" : "marketing\\js\\voice-narrator.js",
+    "modificationInfo" : {
+      "contentHash" : 1632530757,
+      "lastModified" : 1784738516515
+    },
+    "linesOfCode" : 127
+  }, {
+    "path" : "protofilo\\script.js",
+    "modificationInfo" : {
+      "contentHash" : 72835208,
+      "lastModified" : 1784254690506
+    },
+    "linesOfCode" : 126
+  }, {
+    "path" : "recipe\\app.js",
+    "modificationInfo" : {
+      "contentHash" : -1927288854,
+      "lastModified" : 1784244947660
+    },
+    "linesOfCode" : 191
+  }, {
+    "path" : "stock market\\app.js",
+    "modificationInfo" : {
+      "contentHash" : -327349439,
+      "lastModified" : 1784684527295
+    },
+    "linesOfCode" : 170
+  }, {
+    "path" : "stock market\\d3-charts.js",
+    "modificationInfo" : {
+      "contentHash" : 1762425326,
+      "lastModified" : 1784684523269
+    },
+    "linesOfCode" : 169
+  }, {
+    "path" : "stock market\\three-scene.js",
+    "modificationInfo" : {
+      "contentHash" : -400803922,
+      "lastModified" : 1784684525277
+    },
+    "linesOfCode" : 123
+  }, {
+    "path" : "todolist\\app.js",
+    "modificationInfo" : {
+      "contentHash" : -1604843873,
+      "lastModified" : 1784679052443
+    },
+    "linesOfCode" : 152
+  }, {
+    "path" : "todolist\\d3-charts.js",
+    "modificationInfo" : {
+      "contentHash" : 1512738632,
+      "lastModified" : 1784678934478
+    },
+    "linesOfCode" : 107
+  }, {
+    "path" : "todolist\\three-scene.js",
+    "modificationInfo" : {
+      "contentHash" : 1830304328,
+      "lastModified" : 1784679079407
+    },
+    "linesOfCode" : 283
+  }, {
+    "path" : "waetehr app\\script.js",
+    "modificationInfo" : {
+      "contentHash" : -243787974,
+      "lastModified" : 1784252312530
+    },
+    "linesOfCode" : 174
+  } ],
+  "appVersion" : "1.3.0"
+}

@@ -1,5 +1,30 @@
 {
   "version": 2,
   "name": "apex-ecosystem-platform",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/stttts/(.*)", "destination": "/STT_TTS/$1" },
+    { "source": "/stttts", "destination": "/STT_TTS/" },
+    { "source": "/stockmarket/(.*)", "destination": "/stock market/$1" },
+    { "source": "/stockmarket", "destination": "/stock market/" },
+    { "source": "/stock-market/(.*)", "destination": "/stock market/$1" },
+    { "source": "/stock-market", "destination": "/stock market/" },
+    { "source": "/dashboard/(.*)", "destination": "/dashboard/$1" },
+    { "source": "/dashboard", "destination": "/dashboard/" },
+    { "source": "/todolist/(.*)", "destination": "/todolist/$1" },
+    { "source": "/todolist", "destination": "/todolist/" },
+    { "source": "/weather/(.*)", "destination": "/waetehr app/$1" },
+    { "source": "/weather", "destination": "/waetehr app/" },
+    { "source": "/recipe/(.*)", "destination": "/recipe/$1" },
+    { "source": "/recipe", "destination": "/recipe/" },
+    { "source": "/chameleon/(.*)", "destination": "/find the chameleon/$1" },
+    { "source": "/chameleon", "destination": "/find the chameleon/" },
+    { "source": "/tictactoe/(.*)", "destination": "/TIC TAC TOC/$1" },
+    { "source": "/tictactoe", "destination": "/TIC TAC TOC/" },
+    { "source": "/portfolio/(.*)", "destination": "/protofilo/$1" },
+    { "source": "/portfolio", "destination": "/protofilo/" },
+    { "source": "/company/(.*)", "destination": "/company/$1" },
+    { "source": "/company", "destination": "/company/" }
+  ]
 }
