@@ -2,13 +2,233 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=marketing/index.html">
-  <title>Redirecting to Apex Ecosystem...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Ecosystem | 3D & Analytics Marketing Showcase</title>
+  <meta name="description" content="Explore the next-generation digital ecosystem showcasing 10 cutting-edge applications powered by Three.js 3D WebGL graphics and interactive sandboxes.">
+
+  <!-- External Stylesheets & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body style="background:#050714; color:#ffffff; font-family:sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0;">
-  <div style="text-align:center;">
-    <h2>Launching Apex Ecosystem...</h2>
-    <p>If you are not redirected automatically, <a href="marketing/index.html" style="color:#00f3ff;">click here</a>.</p>
+<body>
+
+  <!-- Custom Glowing Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- 3D Planet Hover Tooltip Badge -->
+  <div id="planet-hover-badge"></div>
+
+  <!-- Navigation Bar (Clean Header) -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <i class="fa-solid fa-atom brand-icon"></i>
+      <span class="gradient-text">APEX ECOSYSTEM</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#galaxy-hero"><i class="fa-solid fa-globe"></i> 3D Holodeck</a></li>
+      <li><a href="#products-showcase"><i class="fa-solid fa-cubes"></i> 10 Workspace Projects</a></li>
+      <li><a href="#analytics-section"><i class="fa-solid fa-chart-line"></i> Ecosystem Telemetry</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Language Selector Toggle (EN / AR) -->
+      <button class="btn btn-secondary" id="voice-lang-toggle-btn" title="Switch Voice Tour Language">
+        <i class="fa-solid fa-language"></i> EN
+      </button>
+
+      <!-- AI Voice Tour Button & Waveform -->
+      <button class="btn btn-secondary" id="ai-voice-tour-btn">
+        <i class="fa-solid fa-volume-high"></i> Voice Tour
+      </button>
+      <div id="voice-waveform" class="voice-waveform">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+      </div>
+
+      <button class="icon-btn" id="sound-toggle-btn" title="Toggle Sound Synth">
+        <i class="fa-solid fa-music"></i>
+      </button>
+      <button class="icon-btn" id="reset-camera-btn" title="Reset 3D View">
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section with Three.js 3D Holodeck -->
+  <section class="hero-section" id="galaxy-hero">
+    <!-- WebGL 3D Canvas -->
+    <div id="three-canvas-container"></div>
+
+    <!-- 3D Holodeck Viewport Mode Switcher -->
+    <div class="holodeck-mode-bar">
+      <button class="filter-btn active" id="mode-constellation-btn" data-mode="constellation">
+        <i class="fa-solid fa-circle-nodes"></i> Constellation Mode
+      </button>
+      <button class="filter-btn" id="mode-holotable-btn" data-mode="holotable">
+        <i class="fa-solid fa-table-cells-large"></i> 3D AR Holo-Table
+      </button>
+      <button class="filter-btn" id="mode-warptunnel-btn" data-mode="warptunnel">
+        <i class="fa-solid fa-meteor"></i> Warp Speed Tunnel
+      </button>
+    </div>
+
+    <!-- Hero Content Overlay -->
+    <div class="hero-overlay-content">
+      <div class="hero-badge glass-pill">
+        <i class="fa-solid fa-sparkles"></i> 10 Integrated Applications • WebGL & Real Codebases
+      </div>
+      <h1 class="hero-title">
+        The Next-Gen <span class="gradient-text">Digital Product</span> Ecosystem
+      </h1>
+      <p class="hero-subtitle">
+        An extraordinary marketing showcase unifying Speech Studio, StockDash, GeoDash, 3D Dynamic Tasks, AeroCast Weather, Culinary Explorer, Image Compositor, 3D Tic Tac Toe, Developer Portfolio, and Nexus.
+      </p>
+      <div class="hero-actions">
+        <a href="#products-showcase" class="btn btn-primary">
+          <i class="fa-solid fa-grid-2"></i> Launch 10 Projects
+        </a>
+        <a href="#analytics-section" class="btn btn-secondary">
+          <i class="fa-solid fa-chart-line"></i> View Real Telemetry
+        </a>
+      </div>
+    </div>
+
+    <!-- Focused Planet Detail Drawer -->
+    <div id="planet-detail-panel" class="glass-panel">
+      <div class="detail-header">
+        <div class="detail-brand">
+          <i id="detail-icon" class="fa-solid fa-atom"></i>
+          <div>
+            <h3 id="detail-title">Project Name</h3>
+            <span id="detail-cat" class="badge-cat">Category</span>
+          </div>
+        </div>
+        <button id="detail-panel-close" class="detail-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <p id="detail-subtitle" class="detail-subtitle">Sub-headline</p>
+      <p id="detail-desc" class="detail-desc">Project details and overview paragraph goes here.</p>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+        <span class="m-label">Ecosystem Rating</span>
+        <span id="detail-rating" class="rating-pill">98%</span>
+      </div>
+
+      <button id="detail-launch-btn" class="btn btn-primary" style="width:100%;">
+        <i class="fa-solid fa-up-right-from-square"></i> Launch Live Application
+      </button>
+    </div>
+  </section>
+
+  <!-- Product Suite Showcase Grid (10 Workspace Projects with Dynamic Recommendations) -->
+  <section class="section-padding" id="products-showcase">
+    <div class="section-header">
+      <span class="section-tag">// 10 WORKSPACE PROJECTS</span>
+      <h2 class="section-title">Explore The <span class="gradient-text-alt">10 Workspace Projects</span></h2>
+      <p class="section-desc">Filter, launch, and test projects live. Dynamic recommendations update automatically as you explore!</p>
+    </div>
+
+    <!-- Category Filters -->
+    <div id="category-filter-bar" class="category-filter-bar"></div>
+
+    <!-- Project Cards Grid -->
+    <div id="project-grid-container" class="project-grid"></div>
+  </section>
+
+  <!-- Dedicated Real-Time Ecosystem Analytics & Live Telemetry Dashboard Section -->
+  <section class="section-padding" id="analytics-section">
+    <div class="section-header">
+      <span class="section-tag">// BACKGROUND DATA ENGINE & JSON PERSISTENCE</span>
+      <h2 class="section-title">Real-Time Telemetry & <span class="gradient-text">Ecosystem Analytics</span></h2>
+      <p class="section-desc">Active session timing per project, visit tracking, and background JSON data persistence.</p>
+    </div>
+
+    <div class="glass-panel analytics-dashboard-card">
+      <!-- Live Global Metrics Row -->
+      <div class="telemetry-metrics-row">
+        <div class="telemetry-box">
+          <div class="t-icon" style="color:var(--cyan-glow);"><i class="fa-solid fa-clock"></i></div>
+          <div class="t-data">
+            <span class="t-label">Your Active Session Time</span>
+            <span class="t-value" id="section-session-timer">00:00</span>
+          </div>
+        </div>
+        <div class="telemetry-box">
+          <div class="t-icon" style="color:var(--purple-glow);"><i class="fa-solid fa-rocket"></i></div>
+          <div class="t-data">
+            <span class="t-label">Total Apps Launched</span>
+            <span class="t-value" id="section-launch-counter">0</span>
+          </div>
+        </div>
+        <div class="telemetry-box" style="display:flex; align-items:center; justify-content:center;">
+          <button class="btn btn-json" id="section-export-json-btn">
+            <i class="fa-solid fa-download"></i> Export Analytics (.json)
+          </button>
+        </div>
+      </div>
+
+      <!-- Real-Time Project Telemetry Table & Live Usage -->
+      <div style="margin-top:30px;">
+        <h3 style="font-size:1.3rem; color:#ffffff; margin-bottom:16px;">
+          <i class="fa-solid fa-table-list" style="color:var(--cyan-glow);"></i> Per-Project Usage & Timing Telemetry
+        </h3>
+        <div id="project-telemetry-grid" class="project-telemetry-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div style="margin-bottom: 12px; font-weight: 700; color: var(--text-main);">
+      APEX ECOSYSTEM LABS © 2026
+    </div>
+    <p>Powered by Three.js WebGL Engine, Real Analytics Engine, and Web Audio API</p>
+  </footer>
+
+  <!-- Full-Screen Interactive Project Launcher Modal -->
+  <div id="project-launcher-modal" class="modal-overlay">
+    <div class="glass-panel modal-window">
+      <div class="modal-navbar">
+        <div class="modal-title-group">
+          <i id="modal-project-icon" class="fa-solid fa-rocket"></i>
+          <span id="modal-project-title">Project Title</span>
+          <span class="glass-pill" style="font-size:0.75rem; color:var(--emerald-glow);">
+            <i class="fa-solid fa-circle" style="font-size:8px;"></i> LIVE SANDBOX RUNNING
+          </span>
+        </div>
+        <div class="modal-controls">
+          <a id="modal-external-link" href="#" target="_blank" class="icon-btn" title="Open in New Tab">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <button id="modal-close-btn" class="icon-btn" title="Close Sandbox">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-iframe-container">
+        <iframe id="launcher-iframe" src="about:blank"></iframe>
+      </div>
+    </div>
   </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- Application Modules -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/audio-synth.js"></script>
+  <script src="js/three-galaxy.js"></script>
+  <script src="js/analytics-engine.js"></script>
+  <script src="js/voice-narrator.js"></script>
+  <script src="js/launcher-modal.js"></script>
+  <script src="js/app.js"></script>
+
 </body>
 </html>
