@@ -21,6 +21,27 @@
     },
     "linesOfCode" : 451
   }, {
+    "path" : "chameleon\\app.js",
+    "modificationInfo" : {
+      "contentHash" : 224323807,
+      "lastModified" : 1784748132514
+    },
+    "linesOfCode" : 492
+  }, {
+    "path" : "chameleon\\d3-chameleon.js",
+    "modificationInfo" : {
+      "contentHash" : 617254976,
+      "lastModified" : 1784748117132
+    },
+    "linesOfCode" : 148
+  }, {
+    "path" : "chameleon\\three-chameleon.js",
+    "modificationInfo" : {
+      "contentHash" : -1505031139,
+      "lastModified" : 1784748107597
+    },
+    "linesOfCode" : 179
+  }, {
     "path" : "company\\js\\main.js",
     "modificationInfo" : {
       "contentHash" : -593468919,
@@ -107,15 +128,15 @@
   }, {
     "path" : "js\\projects-data.js",
     "modificationInfo" : {
-      "contentHash" : -500079255,
-      "lastModified" : 1784747509336
+      "contentHash" : 491899865,
+      "lastModified" : 1784748169150
     },
     "linesOfCode" : 235
   }, {
     "path" : "js\\three-galaxy.js",
     "modificationInfo" : {
-      "contentHash" : 1605948746,
-      "lastModified" : 1784746639920
+      "contentHash" : -1843211062,
+      "lastModified" : 1784748187920
     },
     "linesOfCode" : 438
   }, {
@@ -149,8 +170,8 @@
   }, {
     "path" : "marketing\\js\\d3-analytics.js",
     "modificationInfo" : {
-      "contentHash" : -1061022934,
-      "lastModified" : 1784746649905
+      "contentHash" : -1770241118,
+      "lastModified" : 1784748206418
     },
     "linesOfCode" : 330
   }, {
@@ -177,8 +198,8 @@
   }, {
     "path" : "marketing\\js\\projects-data.js",
     "modificationInfo" : {
-      "contentHash" : -208275549,
-      "lastModified" : 1784747518160
+      "contentHash" : -470924243,
+      "lastModified" : 1784748175221
     },
     "linesOfCode" : 235
   }, {
@@ -191,8 +212,8 @@
   }, {
     "path" : "marketing\\js\\three-galaxy.js",
     "modificationInfo" : {
-      "contentHash" : 1605948746,
-      "lastModified" : 1784746643828
+      "contentHash" : -1843211062,
+      "lastModified" : 1784748194584
     },
     "linesOfCode" : 438
   }, {

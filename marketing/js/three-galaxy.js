@@ -240,8 +240,8 @@ class EcosystemGalaxy {
       ['stttts', 'weather'],
       ['stockmarket', 'dashboard'],
       ['todolist', 'recipe'],
-      ['recipe', 'ecommerce'],
-      ['ecommerce', 'tictactoe'],
+      ['recipe', 'chameleon'],
+      ['chameleon', 'tictactoe'],
       ['tictactoe', 'portfolio'],
       ['company', 'portfolio']
     ];

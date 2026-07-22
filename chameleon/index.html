@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chameleon Pro 3D | Canvas Compositor & Stealth Game Studio</title>
+  <meta name="description" content="Next-gen HTML5 Canvas image compositor, 3D WebGL Three.js chameleon skin customization, D3 camouflage analytics, and interactive stealth game.">
+
+  <!-- External Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand">
+      <i class="fa-solid fa-staff-snake brand-icon"></i>
+      <span class="brand-name">CHAMELEON<span class="highlight">PRO 3D</span></span>
+    </div>
+
+    <!-- Mode Selector Tabs -->
+    <nav class="mode-tabs">
+      <button class="tab-btn active" data-tab="compositor">
+        <i class="fa-solid fa-layer-group"></i> <span>Canvas Compositor</span>
+      </button>
+      <button class="tab-btn" data-tab="game">
+        <i class="fa-solid fa-gamepad"></i> <span>Stealth Game Mode</span>
+      </button>
+      <button class="tab-btn" data-tab="analytics">
+        <i class="fa-solid fa-chart-pie"></i> <span>D3 Camouflage Telemetry</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero 3D WebGL Chameleon Showcase -->
+  <section class="hero-3d-section">
+    <div class="hero-info">
+      <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> 3D WEBGL CAMOUFLAGE SIMULATOR</span>
+      <h1 class="hero-title">Adaptive <span class="gradient-text">3D Chameleon</span> Studio</h1>
+      <p class="hero-subtitle">Inspect the 3D chameleon model, toggle biological skin textures, and composite custom photos in real-time.</p>
+      
+      <div class="skin-selector">
+        <label>Select 3D Skin Texture:</label>
+        <div class="skin-buttons">
+          <button class="skin-btn active" data-skin="jungle">🌿 Jungle Camo</button>
+          <button class="skin-btn" data-skin="neon">⚡ Cyber Neon</button>
+          <button class="skin-btn" data-skin="prism">💎 Prism Crystal</button>
+          <button class="skin-btn" data-skin="lava">🔥 Volcanic Lava</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Three.js 3D Viewport -->
+    <div class="hero-viewport glass-card">
+      <div id="three-chameleon-container"></div>
+      <div class="viewport-overlay">
+        <span class="drag-hint"><i class="fa-solid fa-arrows-spin"></i> Drag to rotate 3D Chameleon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Workspaces Container -->
+  <main class="main-content">
+
+    <!-- Tab 1: Image Compositor Studio -->
+    <div class="tab-workspace active" id="workspace-compositor">
+      <div class="compositor-layout">
+        
+        <!-- Sidebar Controls -->
+        <aside class="controls-panel glass-card">
+          <h3 class="panel-heading"><i class="fa-solid fa-sliders"></i> Compositor Controls</h3>
+          
+          <!-- Background Setup -->
+          <div class="control-block">
+            <label>1. Background Image</label>
+            <div class="upload-box">
+              <input type="file" id="bg-upload-input" accept="image/*">
+              <button class="btn btn-secondary btn-full"><i class="fa-solid fa-upload"></i> Upload Custom BG</button>
+            </div>
+            <div class="preset-buttons">
+              <span>Presets:</span>
+              <button class="preset-btn active" data-bg="jungle">Deep Forest</button>
+              <button class="preset-btn" data-bg="cyber">Cyber City</button>
+              <button class="preset-btn" data-bg="desert">Desert Dunes</button>
+            </div>
+          </div>
+
+          <!-- Overlay Setup -->
+          <div class="control-block">
+            <label>2. Overlay Chameleon</label>
+            <div class="upload-box">
+              <input type="file" id="overlay-upload-input" accept="image/*">
+              <button class="btn btn-secondary btn-full"><i class="fa-solid fa-upload"></i> Upload Custom Overlay</button>
+            </div>
+            <div class="preset-buttons">
+              <span>Presets:</span>
+              <button class="preset-overlay-btn active" data-ov="camo">Green Camo</button>
+              <button class="preset-overlay-btn" data-ov="neon">Neon Lizard</button>
+              <button class="preset-overlay-btn" data-ov="golden">Golden Crest</button>
+            </div>
+          </div>
+
+          <!-- Transformation Sliders -->
+          <div class="control-block">
+            <label>3. Size & Position</label>
+
+            <div class="slider-item">
+              <span>Scale (<strong id="scale-val">50</strong>%)</span>
+              <input type="range" id="scale-slider" min="1" max="300" value="50">
+            </div>
+
+            <div class="slider-item">
+              <span>Angle (<strong id="rot-val">0</strong>°)</span>
+              <input type="range" id="rot-slider" min="-180" max="180" value="0">
+            </div>
+
+            <div class="slider-item">
+              <span>Position X (<strong id="posx-val">50</strong>%)</span>
+              <input type="range" id="posx-slider" min="0" max="100" value="50">
+            </div>
+
+            <div class="slider-item">
+              <span>Position Y (<strong id="posy-val">50</strong>%)</span>
+              <input type="range" id="posy-slider" min="0" max="100" value="50">
+            </div>
+          </div>
+
+          <!-- Color & Blend Mode -->
+          <div class="control-block">
+            <label>4. Blend & Effects</label>
+
+            <div class="slider-item">
+              <span>Opacity (<strong id="opacity-val">100</strong>%)</span>
+              <input type="range" id="opacity-slider" min="0" max="100" value="100">
+            </div>
+
+            <div class="slider-item">
+              <span>Hue Shift (<strong id="hue-val">0</strong>°)</span>
+              <input type="range" id="hue-slider" min="0" max="360" value="0">
+            </div>
+
+            <div class="slider-item">
+              <label>Blend Mode</label>
+              <select id="blend-select" class="custom-select">
+                <option value="source-over">Normal</option>
+                <option value="multiply">Multiply (Shadow)</option>
+                <option value="screen">Screen (Light)</option>
+                <option value="overlay">Overlay (Camouflage)</option>
+                <option value="color-dodge">Glow Dodge</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="download-btn" class="btn btn-primary btn-full"><i class="fa-solid fa-download"></i> Download Composited PNG</button>
+        </aside>
+
+        <!-- Live Canvas Preview -->
+        <section class="preview-panel glass-card">
+          <div class="preview-header">
+            <h3><i class="fa-solid fa-image"></i> Live HTML5 Canvas Viewport</h3>
+            <span class="hint-text">Drag on canvas to position chameleon</span>
+          </div>
+          <div class="canvas-viewport" id="canvas-container">
+            <canvas id="compositor-canvas"></canvas>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Tab 2: Stealth Game Mode ("Find the Chameleon") -->
+    <div class="tab-workspace" id="workspace-game">
+      <div class="game-layout glass-card">
+        <div class="game-header">
+          <div class="game-title-group">
+            <h2><i class="fa-solid fa-eye"></i> Find the Hidden Chameleon Challenge</h2>
+            <p>Can you spot the camouflaged chameleon hidden in the environment before time runs out?</p>
+          </div>
+
+          <div class="game-stats-bar">
+            <div class="stat-pill"><i class="fa-solid fa-clock"></i> Time: <strong id="game-timer">30</strong>s</div>
+            <div class="stat-pill"><i class="fa-solid fa-trophy"></i> Score: <strong id="game-score">0</strong></div>
+            <div class="stat-pill"><i class="fa-solid fa-bullseye"></i> Found: <strong id="game-found">0</strong>/5</div>
+          </div>
+        </div>
+
+        <div class="game-controls-bar">
+          <div class="diff-selector">
+            <span>Difficulty:</span>
+            <button class="diff-btn active" data-diff="easy">Easy</button>
+            <button class="diff-btn" data-diff="medium">Medium</button>
+            <button class="diff-btn" data-diff="hard">Hard (Stealth Master)</button>
+          </div>
+          <button class="btn btn-primary" id="start-game-btn"><i class="fa-solid fa-play"></i> Start Challenge</button>
+        </div>
+
+        <div class="game-canvas-wrapper" id="game-canvas-container">
+          <canvas id="game-canvas"></canvas>
+          <div class="game-overlay-message" id="game-overlay-msg">
+            <div class="msg-content">
+              <i class="fa-solid fa-crosshairs msg-icon"></i>
+              <h3 id="msg-title">Ready for the Challenge?</h3>
+              <p id="msg-desc">Click "Start Challenge" to generate a hidden chameleon in the wild!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: D3 Camouflage Telemetry -->
+    <div class="tab-workspace" id="workspace-analytics">
+      <div class="analytics-layout glass-card">
+        <div class="analytics-header">
+          <h2><i class="fa-solid fa-chart-line"></i> D3.js Camouflage & Spectral Telemetry</h2>
+          <p>Real-time spectral analysis comparing background contrast, color matching, and visibility index.</p>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-box">
+            <h3>Spectral Match Percentage (%)</h3>
+            <div id="d3-match-chart" class="d3-chart"></div>
+          </div>
+
+          <div class="chart-box">
+            <h3>Visibility Index by Environment</h3>
+            <div id="d3-visibility-chart" class="d3-chart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="three-chameleon.js"></script>
+  <script src="d3-chameleon.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

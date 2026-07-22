@@ -25,7 +25,7 @@
     { "source": "/portfolio", "destination": "/protofilo/" },
     { "source": "/company/(.*)", "destination": "/company/$1" },
     { "source": "/company", "destination": "/company/" },
-    { "source": "/ecommerce/(.*)", "destination": "/ecommerce/$1" },
-    { "source": "/ecommerce", "destination": "/ecommerce/" }
+    { "source": "/chameleon/(.*)", "destination": "/chameleon/$1" },
+    { "source": "/chameleon", "destination": "/chameleon/" }
   ]
 }
