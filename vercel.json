@@ -18,13 +18,14 @@
     { "source": "/weather", "destination": "/waetehr app/" },
     { "source": "/recipe/(.*)", "destination": "/recipe/$1" },
     { "source": "/recipe", "destination": "/recipe/" },
-    { "source": "/chameleon/(.*)", "destination": "/find the chameleon/$1" },
-    { "source": "/chameleon", "destination": "/find the chameleon/" },
+
     { "source": "/tictactoe/(.*)", "destination": "/TIC TAC TOC/$1" },
     { "source": "/tictactoe", "destination": "/TIC TAC TOC/" },
     { "source": "/portfolio/(.*)", "destination": "/protofilo/$1" },
     { "source": "/portfolio", "destination": "/protofilo/" },
     { "source": "/company/(.*)", "destination": "/company/$1" },
-    { "source": "/company", "destination": "/company/" }
+    { "source": "/company", "destination": "/company/" },
+    { "source": "/ecommerce/(.*)", "destination": "/ecommerce/$1" },
+    { "source": "/ecommerce", "destination": "/ecommerce/" }
   ]
 }

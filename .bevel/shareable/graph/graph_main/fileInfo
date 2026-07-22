@@ -49,12 +49,33 @@
     },
     "linesOfCode" : 473
   }, {
+    "path" : "ecommerce\\app.js",
+    "modificationInfo" : {
+      "contentHash" : 583215847,
+      "lastModified" : 1784747496300
+    },
+    "linesOfCode" : 427
+  }, {
+    "path" : "ecommerce\\d3-sales.js",
+    "modificationInfo" : {
+      "contentHash" : 1014064416,
+      "lastModified" : 1784746552046
+    },
+    "linesOfCode" : 148
+  }, {
+    "path" : "ecommerce\\three-product.js",
+    "modificationInfo" : {
+      "contentHash" : -1410891811,
+      "lastModified" : 1784747183475
+    },
+    "linesOfCode" : 411
+  }, {
     "path" : "find the chameleon\\script.js",
     "modificationInfo" : {
-      "contentHash" : 1498950421,
-      "lastModified" : 1784595870088
+      "contentHash" : 250698929,
+      "lastModified" : 1784746103551
     },
-    "linesOfCode" : 150
+    "linesOfCode" : 162
   }, {
     "path" : "js\\analytics-engine.js",
     "modificationInfo" : {
@@ -86,17 +107,17 @@
   }, {
     "path" : "js\\projects-data.js",
     "modificationInfo" : {
-      "contentHash" : 981806984,
-      "lastModified" : 1784745826564
+      "contentHash" : -500079255,
+      "lastModified" : 1784747509336
     },
     "linesOfCode" : 235
   }, {
     "path" : "js\\three-galaxy.js",
     "modificationInfo" : {
-      "contentHash" : 1045457076,
-      "lastModified" : 1784744362165
+      "contentHash" : 1605948746,
+      "lastModified" : 1784746639920
     },
-    "linesOfCode" : 437
+    "linesOfCode" : 438
   }, {
     "path" : "js\\voice-narrator.js",
     "modificationInfo" : {
@@ -128,8 +149,8 @@
   }, {
     "path" : "marketing\\js\\d3-analytics.js",
     "modificationInfo" : {
-      "contentHash" : -1408526765,
-      "lastModified" : 1784738281964
+      "contentHash" : -1061022934,
+      "lastModified" : 1784746649905
     },
     "linesOfCode" : 330
   }, {
@@ -156,8 +177,8 @@
   }, {
     "path" : "marketing\\js\\projects-data.js",
     "modificationInfo" : {
-      "contentHash" : 1581664392,
-      "lastModified" : 1784745835669
+      "contentHash" : -208275549,
+      "lastModified" : 1784747518160
     },
     "linesOfCode" : 235
   }, {
@@ -170,10 +191,10 @@
   }, {
     "path" : "marketing\\js\\three-galaxy.js",
     "modificationInfo" : {
-      "contentHash" : 1045457076,
-      "lastModified" : 1784738274459
+      "contentHash" : 1605948746,
+      "lastModified" : 1784746643828
     },
-    "linesOfCode" : 437
+    "linesOfCode" : 438
   }, {
     "path" : "marketing\\js\\voice-narrator.js",
     "modificationInfo" : {

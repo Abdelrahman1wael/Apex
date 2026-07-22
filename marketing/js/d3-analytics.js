@@ -63,7 +63,6 @@ class D3AnalyticsEngine {
           name: 'Interactive Tools',
           color: '#06d6a0',
           children: [
-            { name: 'Compositor Pro', value: 92, id: 'chameleon' },
             { name: '3D Tic Tac Toe', value: 90, id: 'tictactoe' }
           ]
         },
@@ -71,6 +70,7 @@ class D3AnalyticsEngine {
           name: 'Enterprise & Portfolio',
           color: '#ff007f',
           children: [
+            { name: 'Apex Luxe 3D', value: 98, id: 'ecommerce' },
             { name: 'Dev Portfolio', value: 95, id: 'portfolio' },
             { name: 'Nexus Company', value: 94, id: 'company' }
           ]
