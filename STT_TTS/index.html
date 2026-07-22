@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Speech-to-Text and Text-to-Speech Web Tool">
+    <title>Voice Converter - STT & TTS</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Speech Studio</h1>
+            <p>Convert Speech to Text & Text to Speech seamlessly</p>
+        </header>
+
+        <main class="grid-container">
+            <!-- Speech to Text Section -->
+            <section class="card">
+                <div class="card-header">
+                    <h2>Speech to Text (STT)</h2>
+                    <span class="badge" id="stt-status">Idle</span>
+                </div>
+                <div class="card-body">
+                    <textarea id="stt-output" placeholder="Click 'Start Listening' and speak... Your transcribed text will appear here." readonly></textarea>
+                </div>
+                <div class="card-footer">
+                    <button id="stt-btn" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="22"></line>
+                        </svg>
+                        <span id="stt-btn-text">Start Listening</span>
+                    </button>
+                    <button id="clear-stt-btn" class="btn btn-secondary">Clear</button>
+                </div>
+            </section>
+
+            <!-- Text to Speech Section -->
+            <section class="card">
+                <div class="card-header">
+                    <h2>Text to Speech (TTS)</h2>
+                    <span class="badge" id="tts-status">Idle</span>
+                </div>
+                <div class="card-body">
+                    <textarea id="tts-input" placeholder="Type or paste text here to listen to it..."></textarea>
+                    
+                    <div class="voice-controls">
+                        <div class="control-group">
+                            <label for="voice-select">Voice</label>
+                            <select id="voice-select"></select>
+                        </div>
+                        <div class="control-group">
+                            <label for="rate-range">Speed (<span id="rate-val">1.0</span>x)</label>
+                            <input type="range" id="rate-range" min="0.5" max="2" value="1" step="0.1">
+                        </div>
+                        <div class="control-group">
+                            <label for="pitch-range">Pitch (<span id="pitch-val">1.0</span>)</label>
+                            <input type="range" id="pitch-range" min="0.5" max="2" value="1" step="0.1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button id="speak-btn" class="btn btn-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
+                        <span>Speak Text</span>
+                    </button>
+                    <button id="stop-tts-btn" class="btn btn-danger" disabled>Stop</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>

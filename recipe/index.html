@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Explorer | Premium Recipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- App Container -->
+    <div id="app" class="app-container">
+        
+        <!-- Header / Navigation -->
+        <header class="glass-header">
+            <div class="logo">
+                <i class="fa-solid fa-utensils"></i> Culinary Explorer
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for recipes, ingredients...">
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </header>
+
+        <!-- Main Content (Home / Search Results) -->
+        <main id="mainContent">
+            <section class="hero">
+                <h1>Discover Delicious Recipes</h1>
+                <p>Explore thousands of mouth-watering dishes from around the world.</p>
+            </section>
+
+            <div class="section-title">
+                <h2 id="resultsTitle">Featured Recipes</h2>
+            </div>
+            
+            <!-- Loader -->
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+            </div>
+
+            <!-- Recipe Grid -->
+            <div id="recipeGrid" class="recipe-grid">
+                <!-- Recipe cards will be injected here -->
+            </div>
+            
+            <div id="noResults" class="no-results hidden">
+                <h3>No recipes found. Try a different search!</h3>
+            </div>
+        </main>
+
+        <!-- Recipe Details View (Hidden by default) -->
+        <div id="recipeDetailsView" class="recipe-details-view hidden">
+            <!-- Details injected here -->
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

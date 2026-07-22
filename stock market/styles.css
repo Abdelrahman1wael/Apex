@@ -1,0 +1,124 @@
+:root {
+    --primary-glow: rgba(13, 110, 253, 0.3);
+    --bg-darker: #0d1117;
+}
+
+body {
+    background-color: var(--bg-darker);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism utility */
+.glass-card {
+    background: rgba(255, 255, 255, 0.02) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), 0 0 20px var(--primary-glow);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-darker);
+}
+::-webkit-scrollbar-thumb {
+    background: #343a40;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #495057;
+}
+
+/* D3 Tooltip styling */
+.d3-tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 13px;
+    background: rgba(13, 17, 23, 0.9);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+
+.d3-tooltip .date {
+    color: #adb5bd;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+.d3-tooltip .price {
+    font-weight: bold;
+    font-size: 15px;
+    color: #0dcaf0;
+}
+
+/* List group custom */
+.list-group-item-dark-custom {
+    background: transparent;
+    color: #adb5bd;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 12px 0;
+    transition: color 0.2s;
+    font-size: 0.9rem;
+}
+.list-group-item-dark-custom:last-child {
+    border-bottom: none;
+}
+.list-group-item-dark-custom:hover {
+    color: #fff;
+}
+.update-time {
+    font-size: 0.75rem;
+    color: #6c757d;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Table styling overrides */
+.table-dark {
+    --bs-table-bg: transparent;
+}
+.table > :not(caption) > * > * {
+    background-color: transparent;
+    color: #e9ecef;
+    border-bottom-color: rgba(255,255,255,0.05);
+    padding: 12px 8px;
+}
+.table-hover tbody tr:hover > * {
+    background-color: rgba(255,255,255,0.03);
+}
+
+.text-success-custom { color: #00e676 !important; }
+.text-danger-custom { color: #ff5252 !important; }
+
+/* Pulse animation for live data */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+.live-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #0dcaf0;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+}

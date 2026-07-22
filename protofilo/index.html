@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium developer portfolio built with modern aesthetics">
+    <title>Premium Portfolio | Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfo<span>lio.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="hero-content hidden">
+            <p class="subtitle">Welcome to my world</p>
+            <h1 class="title">Hi, I'm a <br><span class="gradient-text type-text"></span><span class="cursor">|</span></h1>
+            <p class="description">I build exceptional and accessible digital experiences for the web. Turning ideas into real life products is my calling.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">Explore Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <h2 class="section-title hidden">About <span class="gradient-text">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-img hidden">
+                    <div class="img-wrapper glass">
+                        <!-- Placeholder for user's image -->
+                        <img src="https://images.unsplash.com/photo-1549692520-074416f09875?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Developer Workspace">
+                    </div>
+                </div>
+                <div class="about-text hidden">
+                    <h3>Designing digital experiences with <span class="gradient-text">passion.</span></h3>
+                    <p>I'm a passionate software developer focused on crafting clean & user-friendly experiences. I love creating beautiful interfaces that engage users and deliver real business value.</p>
+                    <div class="skills">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <h2 class="section-title hidden">Featured <span class="gradient-text">Projects</span></h2>
+            <div class="project-grid">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card glass hidden">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="FinTech Dashboard UI">
+                    </div>
+                    <div class="project-info">
+                        <h3>FinTech Dashboard</h3>
+                        <p>A modern financial dashboard with real-time data visualization and smooth animations.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">View Live &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card glass hidden delay-1">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="E-Commerce Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A highly scalable e-commerce solution with sleek UI and seamless checkout experience.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">View Live &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card glass hidden delay-2">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Social Connect App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Connect App</h3>
+                        <p>A mobile-first social networking application featuring real-time messaging.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">View Live &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-box glass hidden">
+                <h2 class="section-title">Let's <span class="gradient-text">Talk</span></h2>
+                <p>Interested in working together? Drop me a line.</p>
+                <form class="contact-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer glass">
+        <div class="container footer-content">
+            <div class="footer-logo">Portfo<span>lio.</span></div>
+            <p>&copy; <span id="year"></span> All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">GH</a>
+                <a href="#">LI</a>
+                <a href="#">TW</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

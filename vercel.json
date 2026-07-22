@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "name": "apex-ecosystem-platform",
+  "cleanUrls": true,
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/marketing/index.html"
+    },
+    {
+      "src": "/marketing/(.*)",
+      "dest": "/marketing/$1"
+    },
+    {
+      "src": "/company/(.*)",
+      "dest": "/company/$1"
+    },
+    {
+      "src": "/dashboard/(.*)",
+      "dest": "/dashboard/$1"
+    },
+    {
+      "src": "/find the chameleon/(.*)",
+      "dest": "/find the chameleon/$1"
+    },
+    {
+      "src": "/protofilo/(.*)",
+      "dest": "/protofilo/$1"
+    },
+    {
+      "src": "/recipe/(.*)",
+      "dest": "/recipe/$1"
+    },
+    {
+      "src": "/stock market/(.*)",
+      "dest": "/stock market/$1"
+    },
+    {
+      "src": "/STT_TTS/(.*)",
+      "dest": "/STT_TTS/$1"
+    },
+    {
+      "src": "/TIC TAC TOC/(.*)",
+      "dest": "/TIC TAC TOC/$1"
+    },
+    {
+      "src": "/todolist/(.*)",
+      "dest": "/todolist/$1"
+    },
+    {
+      "src": "/waetehr app/(.*)",
+      "dest": "/waetehr app/$1"
+    }
+  ]
+}

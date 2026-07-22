@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="weather-app">
+        <div class="search-box">
+            <div class="selectors">
+                <div class="select-wrapper">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="country-select">
+                        <option value="" disabled selected>Loading...</option>
+                    </select>
+                </div>
+                <div class="select-wrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <select id="city-select" disabled>
+                        <option value="" disabled selected>Select City...</option>
+                    </select>
+                </div>
+            </div>
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="weather-box" style="display: none;">
+            <div class="box">
+                <div class="info-weather">
+                    <div class="weather">
+                        <img src="" id="weather-icon" alt="Weather Icon">
+                        <p class="temperature"><span id="temp">0</span><span>°C</span></p>
+                        <p class="description" id="desc">Clouds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-details" style="display: none;">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <div class="info-humidity" id="humidity">
+                        <span>0%</span>
+                    </div>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <div class="info-wind" id="wind">
+                        <span>0 km/h</span>
+                    </div>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="error-message" style="display: none;">
+            <img src="https://cdn-icons-png.flaticon.com/512/2748/2748558.png" alt="Error" class="error-icon">
+            <p>City not found!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

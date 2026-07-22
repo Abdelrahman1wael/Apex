@@ -1,0 +1,19 @@
+{
+  "name": "apex-ecosystem-platform",
+  "version": "1.0.0",
+  "description": "Unified 10-Project Ecosystem Marketing Platform",
+  "main": "marketing/index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "npx vercel --prod"
+  },
+  "keywords": [
+    "threejs",
+    "d3",
+    "speech-recognition",
+    "ecosystem",
+    "marketing"
+  ],
+  "author": "Apex Ecosystem Labs",
+  "license": "MIT"
+}

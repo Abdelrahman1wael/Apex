@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Nexus - Innovation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="brand-gradient">NEXUS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-i18n="navHome">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-i18n="navAbout">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" data-i18n="navServices">Services</a>
+                    </li>
+                    
+                    <!-- Language Selector -->
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle lang-selector" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-globe"></i> <span id="currentLangLabel">EN</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 glass-dropdown">
+                            <li><a class="dropdown-item lang-btn" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item lang-btn" href="#" data-lang="fr">Français</a></li>
+                            <li><a class="dropdown-item lang-btn" href="#" data-lang="es">Español</a></li>
+                            <li><a class="dropdown-item lang-btn" href="#" data-lang="ar">العربية</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Theme Toggle -->
+                    <li class="nav-item ms-2">
+                        <button id="theme-toggle" class="btn btn-icon theme-btn" aria-label="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div id="canvas-container"></div>
+        <div class="hero-content container text-center">
+            <h1 class="display-1 fw-bolder mb-4" data-i18n="heroTitle">Future Forward</h1>
+            <p class="lead mb-5" data-i18n="heroSubtitle">Building the next generation of digital experiences.</p>
+            <a href="#about" class="btn btn-primary btn-lg custom-btn rounded-pill px-5" data-i18n="heroBtn">Discover More</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="glass-card p-5 rounded-4">
+                        <h2 class="fw-bold mb-4" data-i18n="aboutTitle">Who We Are</h2>
+                        <p data-i18n="aboutText1" class="text-muted">We are a team of visionaries dedicated to pushing the boundaries of technology. Our mission is to deliver exceptional value through innovative solutions.</p>
+                        <p data-i18n="aboutText2" class="text-muted">With expertise across multiple domains, we transform complex challenges into elegant digital realities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex justify-content-center flex-wrap gap-4">
+                        <div class="stat-circle glass-card text-center p-4 rounded-circle d-flex flex-column justify-content-center align-items-center">
+                            <h3 class="fw-bold text-gradient mb-0">10+</h3>
+                            <p class="mb-0 small text-muted" data-i18n="statYears">Years Exp</p>
+                        </div>
+                        <div class="stat-circle glass-card text-center p-4 rounded-circle d-flex flex-column justify-content-center align-items-center">
+                            <h3 class="fw-bold text-gradient mb-0">500+</h3>
+                            <p class="mb-0 small text-muted" data-i18n="statProjects">Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding alt-bg">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" data-i18n="servicesTitle">Our Services</h2>
+                <p class="text-muted" data-i18n="servicesSubtitle">Comprehensive solutions for your digital journey</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card glass-card text-center p-5 h-100 rounded-4">
+                        <div class="icon-wrapper mb-4">
+                            <i class="bi bi-laptop display-4 brand-gradient-text"></i>
+                        </div>
+                        <h4 data-i18n="serv1Title">Web Development</h4>
+                        <p class="text-muted" data-i18n="serv1Desc">High-performance applications built with modern frameworks.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card glass-card text-center p-5 h-100 rounded-4">
+                        <div class="icon-wrapper mb-4">
+                            <i class="bi bi-phone display-4 brand-gradient-text"></i>
+                        </div>
+                        <h4 data-i18n="serv2Title">Mobile Apps</h4>
+                        <p class="text-muted" data-i18n="serv2Desc">Native and cross-platform mobile experiences.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card glass-card text-center p-5 h-100 rounded-4">
+                        <div class="icon-wrapper mb-4">
+                            <i class="bi bi-layers display-4 brand-gradient-text"></i>
+                        </div>
+                        <h4 data-i18n="serv3Title">UI/UX Design</h4>
+                        <p class="text-muted" data-i18n="serv3Desc">Intuitive interfaces designed for human interaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section-padding pb-4 pt-5 text-center">
+        <div class="container">
+            <h3 class="brand-gradient mb-4">NEXUS</h3>
+            <p class="text-muted mb-4" data-i18n="footerText">Innovating the future, today.</p>
+            <div class="social-links mb-4">
+                <a href="#" class="mx-2 text-muted fs-4"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="mx-2 text-muted fs-4"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="mx-2 text-muted fs-4"><i class="bi bi-github"></i></a>
+            </div>
+            <p class="small text-muted">&copy; 2026 Nexus Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
